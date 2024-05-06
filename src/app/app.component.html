@@ -1,0 +1,17 @@
+
+<main #main class="w-full h-screen text-center bg-[#F5F3F3] flex flex-col xs:justify-center md:justify-start items-center gap-4 overflow-hidden">
+  <div #container class="w-[97vw] mx-auto">
+    <h1 class="whitespace-nowrap px-2 text-[#72035D] font-bold leading-[1]" [fittext]="true" [activateOnResize]="true" [container]="container" [maxFontSize]=230 [modelToWatch]="dateTitle.value">Time To {{dateTitle.value}}</h1>
+    <h2 class="whitespace-nowrap px-4" *ngIf="isDateSelected === 'true'" [fittext]="true" [activateOnResize]="true" [container]="container" [modelToWatch]="countDownDate">{{countDownDate}}</h2>
+  </div>
+  <div class="flex gap-6 justify-center items-center xs:flex-col md:flex-row xs:mt-12">
+    <div class="relative">
+      <input id="dateTitle" class="min-w-60 xs:min-h-12 md:min-h-16 px-4 py-2 rounded-md bg-transparent border-[1px] border-[#757575] outline-none xs:text-sm md:text-lg" placeholder="Midsummer Eve" #dateTitle type="text" [value]="title"  (keyup)="onTitleChange(dateTitle.value)"/>
+      <label for="dateTitle" class="absolute -top-[0.6rem] left-2 bg-[#F5F3F3] px-2 xs:text-xs md:text-sm">Title</label>
+    </div>
+    <div class="relative">
+      <input id="endDate" class="relative min-w-60 xs:min-h-12 md:min-h-16 px-4 py-2 rounded-md bg-transparent border-[1px] border-[#757575] outline-none xs:text-sm md:text-lg" placeholder="2024. 06. 24." #endDate type="date"  [value]="date | date: 'yyyy-MM-dd'" (change)="onDateChange(endDate.value)" />
+      <label for="endDate" class="absolute -top-[0.6rem] left-2 bg-[#F5F3F3] px-2 xs:text-xs md:text-sm">Date</label>
+    </div>
+  </div>
+</main>
