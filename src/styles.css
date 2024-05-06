@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: "DM Sans";
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
