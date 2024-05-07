@@ -1,33 +1,37 @@
-# Description & requirements
 
-Your objective in this assignment is to create a countdown app built using this boilerplate (+ any other tools of your choice) that follows the design specifications provided [in this Figma file](https://www.figma.com/file/UPEugUz5jM9IzIkWft2Y9m/NC-challenge). The app should work in portrait as well as in landscape mode while the text displayed on the screen should always fill the whole width of the screen.
+# Holiday Countdown App - Frontend Challenge
 
-In your app, it should be possible to define the end date and the name of the event taking place on that day. The countdown should always start from the current time and it should display the time remaining to your specified end date in the following format: Days, Hours(h), Minutes(m), Seconds(s) *(e.g., 3 days, 15 h, 20 m, 5 s)*. To make sure the text always covers the entire screen width, it should resize whenever necessary to achieve this objective.
+This is a simple app that enables the user to personalize an event countdown to their selected date and add a title to it.
 
-The purpose of the solution is to “fit” the input text into an element in one line (no line breaks, filling the whole width) using the maximum possible font-size.
+**Technologies used:**
+- Angular & Typescript
+- TailwindCSS & SASS
+- additional package: [ng-fittext](https://www.npmjs.com/package/ng2-fittext)
+- hosting: [angular-cli-ghpages](https://www.npmjs.com/package/angular-cli-ghpages) & Github
 
-Please make sure that your text fit solution is reusable and that the event name, as well as the specified end date, are persisted between page reloads.
+## Development
 
-**Once you feel ready to share your solution, please:**
+I started by setting up an Angular app, added the template html and set the logic behind.
+- setting up template variables, event binding and interpolations
+- writing logic for the variables and events to work in order to be able to change values of the event title and the datepicker
+- using localstorage to save and keep the values entered by the user
+- adding ng-fittext module to the template html to fit text to device width
+- adding TailwindCSS to style the app according to the [mockup](https://www.figma.com/file/UPEugUz5jM9IzIkWft2Y9m/NC-challenge)
+- refactoring and cleaning up the code
+- setting up hosting with angular-cli-ghpages
 
-- Commit the code to Github or your favorite VCS.
-- Write a simple README.md explaining how to set up the project (assuming it’s read by a developer who is experienced with all the used tools).
-- Include a URL to a deployed working Web page (use netlify.com or github.io or whatever simple hosting tool that works for you).
+## Additional thoughts
 
-Please put the resulting project in a public github repository and provide a link to it. Please make it easy for us to test the result.
+Last time I looked into Angular was years ago, so this was really a challenge for me. I started by watching an short course of Angular Essentials and read documentations on the go. Google also was my friend during the development. :grin: You can see I didn't really use Pipes and other useful features of Angular too much, for two reasons: this is a small app, that can be done without them in my opinion, and the fact that even though I looked into them, I'm still not that familiar with them.
+I really liked the challenge, I took it on a personal level. Although it's for sure not the best solution, I'm really proud I could do it with close to zero experience with Angular.
 
-## Optional goals
+**What I would improve/add:**
 
-You’re free to complete this additional goal to get a higher score if you want!
+When developing, I like to think how apps can be improved, even if it includes bigger changes in the UI. I would make the text smaller, maybe even remove the fittext feature. I believe the text is just too big, and it could be difficult to use the app on different desktops, as they push the input fields out of view sometimes. I would also change the way the inputs work, maybe add a button to set and start the countdown. I feel like people are more used to using buttons in general. This would also result in changing the UI a little bit.\
+:sparkles: I would also add a small firework gif or some animation if the countdown date get's to zero, just to show the user their event is today and bring a bit of playfulness into it.
 
-1. Write suggestions of how this solution can be improved. Describe what the next steps would be in order for this app to be production ready. 
+# Link to the app
 
-## Running the app
+Please find the live app here: [Holiday Countdown App](https://wfanni.github.io/holiday-countdown/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. 
-
-## Further help
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Cheers!**
