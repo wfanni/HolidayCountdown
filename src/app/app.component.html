@@ -2,27 +2,14 @@
   #main
   class="w-full h-screen text-center bg-[#F5F3F3] flex flex-col xs:justify-center md:justify-start items-center gap-4 overflow-hidden"
 >
-  <div #container class="w-[97vw] mx-auto">
+  <div #container class="container w-full text-center flex flex-col justify-center items-center">
     <h1
-      class="whitespace-nowrap px-2 text-[#72035D] font-bold leading-[1]"
-      [fittext]="true"
-      [activateOnResize]="true"
-      [container]="container"
-      [maxFontSize]="230"
-      [modelToWatch]="dateTitle.value"
-    >
-      Time To {{ dateTitle.value }}
-    </h1>
+      class="title min-w-fit whitespace-nowrap px-2 text-[#72035D] font-bold leading-[1]"
+    >Time to {{ dateTitle.value }}</h1>
     <h2
-      class="whitespace-nowrap px-4"
+      class="date min-w-fit text-5xl whitespace-nowrap px-4"
       *ngIf="isDateSelected === 'true'"
-      [fittext]="true"
-      [activateOnResize]="true"
-      [container]="container"
-      [modelToWatch]="countDownDate"
-    >
-      {{ countDownDate }}
-    </h2>
+    >{{ countDownDate }}</h2>
   </div>
   <div class="flex gap-6 justify-center items-center xs:flex-col md:flex-row xs:mt-12">
     <div class="relative">
